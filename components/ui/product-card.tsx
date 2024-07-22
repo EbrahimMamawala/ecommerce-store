@@ -28,7 +28,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
         event.stopPropagation();
         previewModal.onOpen(data);
     }
-
+ 
     const onAddToCart: MouseEventHandler<HTMLButtonElement> = (event) =>{
         event.stopPropagation();
         cart.addItem(data);
