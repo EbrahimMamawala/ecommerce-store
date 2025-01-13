@@ -12,10 +12,6 @@ interface MainNavProps {
 const MainNav: React.FC<MainNavProps> = ({ data }) => {
   const pathname = usePathname();
 
-  // Debugging logs
-  console.log("Categories data:", data); // Check if categories are being passed correctly
-  console.log("Current pathname:", pathname); // Check the current path
-
   if (!data || data.length === 0) {
     console.warn("No category data provided. Navigation links will not render.");
   }
@@ -40,12 +36,6 @@ const MainNav: React.FC<MainNavProps> = ({ data }) => {
           {route.label}
         </Link>
       ))}
-      {/* Debugging UI */}
-      {(!data || data.length === 0) && (
-        <div className="text-sm text-red-500">
-          Warning: No categories available to display.
-        </div>
-      )}
     </nav>
   );
 };
